@@ -1,0 +1,109 @@
+
+/* ============ DESKTOP View ========== */
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-size: 16px;
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
+    .rootnav {
+        position: static;
+        height: unset;
+        width: unset;
+        flex-direction: row;
+    }
+
+    .logo {
+        margin-left: 15%;
+    }
+
+    .rootnav a {
+        margin-inline: 10px;
+        padding-block: 5px;
+        position: relative;
+    }
+
+    .rootnav a::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: var(--accent);
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        transition: var(--maintrans);
+    }
+
+    .rootnav a:hover::after {
+        width: 80%;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 70vh;
+        align-items: center;
+    }
+
+    .special-drinks {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .gal-itembig {
+        grid-area: 1 / 1 / span 2 / span 1;
+        max-width: 600px;
+        height: 690px;
+    }
+    .gal-itembig2 {
+        max-width: 600px;
+        height: 690px;
+        grid-area: 3 / 3 / span 2 / span 1;
+    }
+
+    .subscribe form {
+        width: 60%;
+        margin-inline: auto;
+    }
+
+    .subscribe input {
+        font-size: 1.1rem;
+    }
+
+    .subscribe input:focus {
+        outline: none;
+        border: none;
+        box-shadow: 0 0 10px var(--primarycolor);
+    }
+
+    button[type="submit"] {
+        width: 50%;
+        margin-inline: auto;
+    }
+
+    .footer-grid {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-grid > section {
+        flex-basis: 400px;
+    }
+}
+
+/* =========== Tablet View =========== */
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+}

@@ -1,0 +1,379 @@
+/* ----------- Variables --------- */
+
+:root {
+    --primarycolor: #c3c800;
+    --secondarycolor: #f88f6f;
+    --darkcolor: #000;
+    --lightcolor: #fff;
+    --accent: #1b3d2f;
+    --mainfont: "Robot",  sans-serif;
+    --headingfont: "Nanum Pen Script", cursive;
+    --bodybgcolor: #fbfaee;
+    --maintrans: 0.3s ease;
+    --sectrans: 0.5s ease;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Universal styles --------- */
+
+body {
+    font-size: 15px;
+    font-family: var(--mainfont);
+    background-color: var(--bodybgcolor);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, img:not(.logo) {
+    display: block;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ----------- Header -------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+}
+
+header h1 a {
+    color: var(--darkcolor);
+}
+
+.logo {
+    width: 100px;
+}
+
+nav {
+    position: relative;
+    overflow: hidden;
+}
+
+.rootnav {
+    position: fixed;
+    top: 0;
+    right: -2000px;
+    width: 80%;
+    height: 100%;
+    background-color: var(--bodybgcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--sectrans);
+    transition-delay: -0.3s;
+}
+
+.rootnav a {
+    padding: 10px 0;
+    color: var(--accent)
+}
+
+nav i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.rootnav i {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    color: var(--accent);
+}
+
+nav button {
+    background-color: inherit;
+    border: none;
+}
+
+/* ============== Main ============ */
+
+.section-heading {
+    font-family: var(--headingfont);
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin-block: 30px 40px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.no-underline {
+    text-decoration: none !important;
+    margin-block-end: 20px !important;
+}
+
+.hero {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.hero h1 {
+    letter-spacing: 1.1px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.content-box {
+    margin-top: 15px;
+}
+
+.content-box h1:first-of-type {
+    margin-inline: auto;
+}
+
+.hero-rimoz {
+    color: var(--primarycolor);
+    font-size: 3.5rem !important; 
+}
+
+.hero-coffee {
+    padding-left: 50px;
+}
+
+.hero-shop {
+    color: var(--accent);
+    padding-left: 70px;
+}
+
+.trademark {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-block: 30px 20px;
+    font-family: var(--headingfont);
+}
+
+.trademark::after, .trademark::before {
+    content: '"';
+    margin-inline: 10px;
+    color: var(--primarycolor);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.explore {
+    padding: 10px 60px;
+    background-color: var(--primarycolor);
+    color: var(--accent);
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    margin-inline: auto;
+    border-radius: 5px;
+    transition: var(--maintrans);
+    border: 1px solid var(--primarycolor);
+}
+
+.explore:hover {
+    background-color: transparent;
+}
+
+.hero-img {
+    max-width: 600px !important;
+    margin-inline: auto;
+}
+
+.cafe-name {
+    color: var(--accent);
+}
+
+.hero img {
+    width: 100%;
+}
+
+/* -------------- Specials --------- */
+
+.specials {
+    background-color: #6F4E37;
+    padding: 20px;
+}
+
+.specials h2 {
+    color: var(--lightcolor);
+}
+
+.special-drink {
+    width: 80%;
+    margin-inline: auto;
+    background-color: var(--lightcolor);
+    border-radius: 10px;
+    padding: 10px;
+    margin-block: 15px;
+}
+
+.special-drink img {
+    width: 250px;
+    margin-inline: auto;
+}
+
+.content-block h5 {
+    text-align: center;
+    margin-block: 20px;
+    font-size: 2rem;
+    font-family: var(--headingfont);
+}
+
+.price {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 5px 10px; 
+    background-color: var(--secondarycolor);
+    color: var(--lightcolor);
+}
+
+/* ------------ Gallery ---------- */
+
+.gallery {
+    width: 100%;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gal-itembig {
+    grid-area: 1 / 1 / 2 / 3
+}
+
+.gal-itembig2 {
+    grid-row-end: span 2;
+    grid-column-end: span 2;
+}
+
+/* -------- Location -------- */
+
+.location iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* --------- Subscribe --------- */
+
+form {
+    width: 100%;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    font-family: var(--mainfont);
+}
+
+label {
+    text-align: center;
+}
+
+input {
+    min-height: 3rem;
+    text-align: center;
+    padding-block: 5px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: 0 0 2px var(--primarycolor);
+    font-family: var(--mainfont);
+}
+
+button[type="submit"] {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primarycolor);
+    border: none;
+    outline: none;
+    padding-block: 10px;
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-family: var(--headingfont);
+    margin-top: 20px;
+}
+
+/* ------------ FOOTER --------- */
+
+#footer {
+    background-color: var(--accent);
+}
+
+.footer-grid {
+    margin-top: 40px;
+    text-align: center;
+    padding-block: 20px;
+}
+
+.footer-grid h2 {
+    font-family: var(--headingfont);
+    font-size: 1.8rem;
+    color: var(--primarycolor);
+}
+
+.quote p {
+    color: var(--secondarycolor);
+}
+
+.quote p::before, .quote p::after {
+    content: '"';
+    color: var(--primarycolor);
+    margin-inline: 5px;
+    font-family: var(--headingfont);
+    font-size: 1.5rem;
+}
+
+.footer-grid > section {
+    margin-block: 16px;
+}
+
+.footer-grid a {
+    text-decoration: none;
+    color: var(--bodybgcolor);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.footer-grid a:hover {
+    font-size: .8em;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid ul li {
+    margin-block: 10px;
+}
+
+.copyright p {
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    border-top: 1px solid var(--bodybgcolor);
+    padding: 10px;
+    color: var(--bodybgcolor);
+}
